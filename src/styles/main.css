@@ -49,7 +49,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover{
+        transition: all ease-in-out 300ms;
+        transform: translateY(-5px);
+    }
+
+
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+#about{
+    font-size: 2.4rem;
+}
+
+#about h2{
+    font-size: 2em;
+}
+
+#about #aboutme-text{
+    width: 50%;
+    margin: 5rem auto;
+}
