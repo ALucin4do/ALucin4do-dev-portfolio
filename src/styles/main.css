@@ -26,7 +26,7 @@
     z-index: 2;
     opacity: 0;
     transform: translateX(-400px);
-    transition: all ease-in-out 1000ms;
+    transition: all ease-in-out 500ms;
 }
 
 #home hgroup #role:hover span{
@@ -71,4 +71,155 @@
 #about #aboutme-text{
     width: 50%;
     margin: 5rem auto;
+    padding: 2rem;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border-radius: 1rem;
+    color: aliceblue;
 }
+
+#about #aboutme-text p{
+    text-align: justify;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Skills Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#skills{
+    font-size: 2.4rem;
+    gap: 5rem;
+}
+
+#skills #button-toggle-skills{
+    display: flex;
+    gap: 2rem;
+}
+
+#skills #button-toggle-skills input{
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+#skills #my-stacks{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 500ms;
+    
+}
+
+#skills #carousel-container-stacks{
+    width: 5000px;
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+
+
+#skills .stack{
+    cursor: grab;
+    max-height: 110px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 300ms;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+
+    &:active{
+        cursor: grabbing;
+    }
+
+}
+
+#skills .stack figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#skills .stack figure img{
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+#skills .stack figure figcaption{
+    color: aliceblue;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease-in-out 300ms;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+#skills .stack .about-stack{
+    display: none;
+    transition: all ease-in-out 300ms;
+}
+
+#skills .stack:has(figure:hover){
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#skills .stack:has(figure:hover) .about-stack{
+    display: block;
+    color: aliceblue;
+    font-size: 1.6rem;
+    width: 300px;
+    text-align: justify;
+    height: auto;
+    padding: 1rem;
+    
+    /* animation when it appears */
+    animation: appear 300ms ease-in-out;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
