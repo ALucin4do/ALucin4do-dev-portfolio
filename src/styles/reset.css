@@ -52,16 +52,7 @@ a{
 }
 
 
-figure{
-	width: 5rem;  /* tamanhos definidos para que as imagens não fiquem gigantestas */
-	height: 5rem;
-}
 
-img{
-    width: 100%;
-	height: 100%;
-	z-index: 1;
-}
 
 
 
