@@ -478,13 +478,53 @@
 #experience{
     font-size: 2.4rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #experience h2{
     font-size: 1.5em;
 }
 
-#experience
+#experience figure{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2rem auto;
+}
+
+#experience figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
+#experience #beginning{
+    color: azure;
+    font-size: 0.7em;
+    text-align: center;
+}
 
+#experience #hire-me{
+    color: #E34F26;
+}
+
+
+#experience #contact-me{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 0.5em;
+    gap: 2rem;
+}
+
+#experience #contact-me a{
+    color: aliceblue;
+
+    &:hover{
+        color: cornflowerblue;
+    }
+}
