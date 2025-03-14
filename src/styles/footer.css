@@ -1,0 +1,21 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    margin: auto;
+}
+
+footer .copyrights{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 10rem;
+    font-size: 2.4rem;
+}
+
+footer .developed-by img{
+    width: 50px;
+    height: 50px;
+}
