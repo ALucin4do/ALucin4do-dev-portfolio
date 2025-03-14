@@ -8,10 +8,18 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 810px;
+    margin: 0 auto;
 }
 
 #home hgroup h2{
     color: aliceblue;
+}
+
+#home hgroup .typed-cursor{
+    display: none;
 }
 
 #home hgroup #role{
@@ -305,9 +313,9 @@
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -316,6 +324,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;;
 }
 
 #projects .project .project-header .project-title{
@@ -412,21 +421,12 @@
     gap: 1rem;
 }
 
-#projects #coming-soon .project-header{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
-#projects #coming-soon .project-header .project-title{
-    font-size: 1.6rem;
-    color: aliceblue;
-}
+
 
 #projects #coming-soon .project-main{
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 #projects #coming-soon .project-main .project-image{
@@ -434,12 +434,29 @@
     height: 100%;
     border-radius: 1rem;
     overflow: hidden;
+    position: relative;
 }
 
-#projects #coming-soon .project-main .project-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#projects #coming-soon .project-main .project-image>img{
+    filter: blur(10px) brightness( 0.5);
+}
+
+#projects #coming-soon .project-main .project-image div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects #coming-soon .project-main .project-image div img{
+    width: 36px;
+    height: 36px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
 #projects #coming-soon .project-main .project-description{
