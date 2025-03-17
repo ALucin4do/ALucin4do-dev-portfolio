@@ -24,7 +24,7 @@ header #logo-container .logo img{
 header #logo-container h1{
     font-size: 3rem;
     font-weight: 900;
-    background-image: linear-gradient(180deg,var(--logo1) 30%,  var(--logo2) 90%);
+    background-image: linear-gradient(180deg,var(--logo1) 50%,  var(--logo2) 60%);
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -32,7 +32,7 @@ header #logo-container h1{
 
 
     &::before{
-        content: '</ALUCIN4DO>';
+        content: '</ ALUCIN4DO >';
     }
 }
 
