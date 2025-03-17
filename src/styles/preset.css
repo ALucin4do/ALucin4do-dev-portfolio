@@ -1,13 +1,33 @@
 :root{
     /* Colors */
-    --bg-color-1 : rgb(38, 33, 75);
-    --bg-color-2 : darkslateblue;
+    --bg-color-1 : #1e1e30;
+    --bg-color-2 : #242424;
+
+    --rosa: #f72585;
+    --lilas: #6c00e0;
+    --azul: #0600ab;
+    --verde: #05f2d2;
+
+
+    --roxo: #7209b7;
+    --azul-escuro: #3a0ca3;
+    --azul-seila: #3f37c9;
+    --ciano-claro: #22b8d3;
+    --ciano: #4cc9f0;
+    --cor: ##4361ee;
+
+    --footer-bg: #4720b7;
+
 }
 
 body{
-    background-image: linear-gradient(315deg, var(--bg-color-1) 0%,  var(--bg-color-2) 100%);
-    overflow-x: hidden;
+    background: var(--bg-color-1);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
+
+
 
 section{
     display: flex;

@@ -1,21 +1,96 @@
 footer{
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5rem;
+    padding: 1rem 10rem;
     margin: auto;
+    background-color: var(--footer-bg);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 footer .copyrights{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem ;
+    font-size: 1.6rem;
+}
+
+footer .copyrights #email-footer{
+    color: azure;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: text;
+}
+
+footer .copyrights #icons-footer{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+}
+
+footer .copyrights #icons-footer a {
+    font-size: 2.5rem;
+    color: azure;
+    transition: .3s;
+}
+
+footer .copyrights #icons-footer a:nth-of-type(1):hover {
+    color: #0077b5; /* linkedin-blue */
+}
+
+footer .copyrights #icons-footer a:nth-of-type(2):hover {
+    color: #171515; /* github-dark */
+}
+
+footer .copyrights #icons-footer a:nth-of-type(3):hover {
+    color: #bb001b; /* mail-red */
+}
+
+
+
+footer .copyrights a{
+    color: azure;
+    font-size: 0.8rem;
+    align-self: center;
+}
+
+
+
+
+footer .developed-by{
+    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 10rem;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
+    color: azure;
+}
+
+footer .developed-by p{
+    color: azure;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+footer .developed-by p a{
+    color: azure;
+    font-weight: 800;
+    text-decoration: none;
+
+    &::before{
+        content: '</ALUCIN4DO>';
+    }
 }
 
 footer .developed-by img{
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 100%;
 }

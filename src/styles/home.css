@@ -1,0 +1,66 @@
+
+#home{
+    font-size: 6.4rem;
+}
+
+#home hgroup{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 810px;
+    margin: 0 auto;
+}
+
+#home hgroup h2{
+    color: aliceblue;
+}
+
+#home hgroup .typed-cursor{
+    display: none;
+}
+
+#home hgroup #role{
+    font-size: 0.75em;
+    align-self: flex-end;
+    z-index: 3;
+
+}
+
+#home hgroup #role span{
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-400px);
+    transition: all ease-in-out 500ms;
+}
+
+#home hgroup #role:hover span{
+    opacity: 1;
+    transform: translateX(-100px);
+}
+
+#home .social-networks-container{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 10rem;
+
+}
+
+#home .social-networks-container a{
+    width: 7.2rem;
+    height: 7.2rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        transition: all ease-in-out 300ms;
+        transform: translateY(-5px);
+    }
+
+
+}

@@ -1,0 +1,179 @@
+
+#skills{
+    font-size: 2.4rem;
+    gap: 5rem;
+}
+
+#skills #button-toggle-skills{
+    display: flex;
+    gap: 2rem;
+}
+
+#skills #button-toggle-skills input{
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+#skills #my-stacks{
+    width: 70%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 500ms;
+    
+}
+
+#skills #carousel-container-stacks{
+    width: 5000px;
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+#skills .stack {
+    cursor: grab;
+    max-height: 110px;
+    padding: 1rem;
+    position: relative;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease-in-out; 
+
+    
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+
+#skills .stack figure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#skills .stack figure img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+
+#skills .stack figcaption {
+    font-size: 1.6rem;
+    color: aliceblue;
+    text-align: center;
+}
+
+#skills #my-tools{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 500ms;
+}
+
+#skills #scroll-container-tools{
+    width: 200%;
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+#skills .tool {
+    cursor: grab;
+    max-height: 110px;
+    padding: 1rem;
+    position: relative;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease-in-out; 
+
+    
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+#skills .tool figure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#skills .tool figure img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+
+#skills .tool figcaption {
+    font-size: 1.6rem;
+    color: aliceblue;
+    text-align: center;
+    text-transform: uppercase;
+}
