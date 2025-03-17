@@ -2,7 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 3rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header #logo-container{
@@ -23,11 +23,14 @@ header #logo-container .logo img{
 
 
 header #logo-container h1{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
-    background-image: linear-gradient(90deg,var(--rosa), var(--verde));
+    background-image: linear-gradient(180deg,var(--logo1) 30%,  var(--logo2) 90%);
     background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px var(--logo3);
+
 
     &::before{
         content: '</ALUCIN4DO>';

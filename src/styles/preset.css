@@ -3,12 +3,12 @@
     --bg-color-1 : #1e1e30;
     --bg-color-2 : #242424;
 
-    --rosa: #f72585;
+    --logo1: #f72585;
+    --logo2: #05f2d2;
+    --logo3: #0600ab;
+    
+    
     --lilas: #6c00e0;
-    --azul: #0600ab;
-    --verde: #05f2d2;
-
-
     --roxo: #7209b7;
     --azul-escuro: #3a0ca3;
     --azul-seila: #3f37c9;
@@ -27,7 +27,14 @@ body{
     width: 100vw;
 }
 
+/* make main occupy all height availible between header and footer */
+main{
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
 
+}
 
 section{
     display: flex;
