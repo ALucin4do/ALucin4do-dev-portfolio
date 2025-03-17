@@ -1,7 +1,7 @@
 :root{
     /* Colors */
-    --bg-color-1 : #1e1e30;
-    --bg-color-2 : #242424;
+    --bg-color-1 : #110f1a;
+    --bg-color-2 : #1e1e30;
 
     --logo1: #f72585;
     --logo2: #05f2d2;
@@ -12,11 +12,15 @@
     --roxo: #7209b7;
     --azul-escuro: #3a0ca3;
     --azul-seila: #3f37c9;
-    --ciano-claro: #22b8d3;
     --ciano: #4cc9f0;
     --cor: ##4361ee;
-
+    
     --footer-bg: #4720b7;
+    
+    --text-color-1: #e3e6ef;
+    
+    --text-emphasis: var(--logo1);
+    --subtitle: #22b8d3;
 
 }
 
@@ -45,6 +49,8 @@ section{
 
 
 mark{
-    color: teal;
+    color: var(--text-emphasis);
     background-color: transparent;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px var(--text-emphasis);
 }

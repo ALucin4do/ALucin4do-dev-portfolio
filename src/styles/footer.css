@@ -1,64 +1,15 @@
 footer{
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 10rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     margin: auto;
-    background-color: var(--footer-bg);
+    background-color: var(--bg-color-2);
     position: absolute;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
 }
-
-footer .copyrights{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem ;
-    font-size: 1.6rem;
-}
-
-footer .copyrights #email-footer{
-    color: azure;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: text;
-}
-
-footer .copyrights #icons-footer{
-    display: flex;
-    gap: 1rem;
-    align-self: center;
-}
-
-footer .copyrights #icons-footer a {
-    font-size: 2.5rem;
-    color: azure;
-    transition: .3s;
-}
-
-footer .copyrights #icons-footer a:nth-of-type(1):hover {
-    color: #0077b5; /* linkedin-blue */
-}
-
-footer .copyrights #icons-footer a:nth-of-type(2):hover {
-    color: #171515; /* github-dark */
-}
-
-footer .copyrights #icons-footer a:nth-of-type(3):hover {
-    color: #bb001b; /* mail-red */
-}
-
-
-
-footer .copyrights a{
-    color: azure;
-    font-size: 0.8rem;
-    align-self: center;
-}
-
 
 
 
@@ -80,21 +31,25 @@ footer .developed-by p{
     justify-content: center;
 }
 
-footer .developed-by p a{
+footer .developed-by a{
     text-decoration: none;
     font-weight: 900;
-    background-image: linear-gradient(180deg,var(--logo1) 30%,  var(--logo2) 90%);
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 10px var(--logo3);
-
+    transition: all 500ms ease-in-out;
+    color: aliceblue;
+    
     &::before{
         content: '</ALUCIN4DO>';
+    }
+
+    &:hover, &:focus{
+        background-image: linear-gradient(180deg,var(--logo1) 30%,  var(--logo2) 90%);
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 0px 10px var(--logo3);
     }
 }
 
 footer .developed-by img{
-    width: 20px;
+    width: 35px;
     height: 100%;
 }
