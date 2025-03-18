@@ -53,5 +53,6 @@ mark{
     color: var(--text-emphasis);
     background-color: transparent;
     font-weight: bold;
-    text-shadow: 0px 0px 5px var(--text-emphasis);
+    text-shadow: 0 0 3px var(--text-emphasis), 0 0 4px var(--text-emphasis);
 }
+

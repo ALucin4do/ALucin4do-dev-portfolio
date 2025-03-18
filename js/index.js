@@ -7,9 +7,18 @@ const buttons = [
     buttonExperience = document.getElementById('btn-experience'),
 ]
 
+const btnText = document.querySelectorAll('.section-button span');
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         main.innerHTML = '';
+        const activateSpan = button.querySelector('span');
+
+        btnText.forEach(span => {
+            span.classList.remove('active');
+        });
+
+        activateSpan.classList.add('active');
     });
 });
 
@@ -22,6 +31,8 @@ buttonExperience.addEventListener('click', showExperience);
 
 
 showHome();
+btnText[0].classList.add('active'); /* sets home to active */
+
 
 
 /* hover lights effect */
