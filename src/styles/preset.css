@@ -3,8 +3,8 @@
     --bg-color-1 : #110f1a;
     --bg-color-2 : #1e1e30;
 
-    --logo1: #f72585;
-    --logo2: #05f2d2;
+    --logo1: #FF00FF;
+    --logo2: #00FFFF;
     --logo3: #0600ab;
     
     
@@ -20,7 +20,8 @@
     --text-color-1: #e3e6ef;
     
     --text-emphasis: var(--logo1);
-    --subtitle: #22b8d3;
+    --subtitle: #00FFFF ;
+
 
 }
 

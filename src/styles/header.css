@@ -11,8 +11,9 @@ header #logo-container{
 }
 
 header #logo-container .logo{
-    width: 48px;
-    height: 100%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
 }
 
 header #logo-container .logo img{
@@ -46,4 +47,82 @@ header nav ul .navbar-item{
     font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+
+/* hover lights effect */
+
+:root{
+    --x: 0;
+    --y: 0;
+    --xp: 0;
+    --yp: 0;
+
+    --hue: calc(0 + (var(--xp) * 720) );
+    --bg: hsl(0 0% 10%);
+    --size: 100px;
+    --border: #f5f5f5;
+
+    --glow: radial-gradient(
+        50% 50% at center,
+        hsl(var(--hue) 100% 50%),
+        hsl(var(--hue) 100% 40%),
+        transparent
+    )
+    calc((var(--x) * 1px) - (var(--size) / 2)) 
+    calc((var(--y) * 1px) - (var(--size) / 2)) / var(--size) var(--size) no-repeat fixed;
+
+ 
+}
+
+:root:has(.section-button:active){
+    --size: 200px;
+}
+
+.section-button {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--bg);
+    border: 4px solid transparent;
+    box-shadow: inset 0 1px hsl(0, 0%, 100% / 0.15);
+    cursor: pointer;
+    background: linear-gradient(var(--bg), var(--bg)) padding-box,
+                var(--glow), linear-gradient(black, black) border-box;
+    transition: background-size 240ms;
+    touch-action: none;
+    position: relative;
+    padding: 1rem 2rem;
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        box-shadow: inset 0 1px hsl(0, 0%, 100% / 0.15);
+        border-radius: 1rem;
+        background: var(--bg);
+        z-index: 2;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 1rem;
+        background: var(--glow);
+        filter: blur(28px);
+        border: 4px solid transparent;
+    }
+
+}
+
+.section-button span{
+    background: var(--glow), var(--border);
+    background-clip: text;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    inset: 0;
 }
