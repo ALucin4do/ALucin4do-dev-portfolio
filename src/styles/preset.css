@@ -9,17 +9,16 @@
     
     
     --lilas: #6c00e0;
-    --roxo: #7209b7;
-    --azul-escuro: #3a0ca3;
     --azul-seila: #3f37c9;
-    --ciano: #4cc9f0;
-    --cor: ##4361ee;
     
     --footer-bg: #4720b7;
     
+    --title: #ffcc00;
     --text-color-1: #e3e6ef;
+    --text-color-2: #bacfdd;
     
     --text-emphasis: var(--logo1);
+    --text-mark: #00cfc1;
     --subtitle: #00FFFF ;
 
 
@@ -34,7 +33,7 @@ body{
 
 /* make main occupy all height availible between header and footer */
 main{
-    height: 100%;
+    height: 73vh;
     width: 100vw;
     overflow: hidden;
     box-sizing: border-box;
