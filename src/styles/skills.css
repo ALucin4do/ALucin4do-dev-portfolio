@@ -16,62 +16,42 @@
 }
 
 #skills #my-stacks{
-    width: 70%;
-    display: none;
+    width: 150px;
+    height: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
     border-radius: 1rem;
-    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     transition: all ease-in-out 500ms;
     
 }
 
 #skills #carousel-container-stacks{
-    width: 5000px;
     display: flex;
     gap: 2rem;
-    overflow-x: scroll;
     padding: 2rem;
     border-radius: 1rem;
-    
-    &::-webkit-scrollbar{
-        display: none;
-    }
 }
 
+
+
 #skills .stack {
-    cursor: grab;
-    max-height: 110px;
-    padding: 1rem;
+    background-color: black;
+    
+    overflow: hidden;
+    padding: 4rem 1rem;
     position: relative;
-    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 1.2rem;
+    transition: all 1000ms ease-in-out; 
     border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-    transition: all 300ms ease-in-out; 
-
-    
-    &:hover{
-        background-color: rgba(255, 255, 255, 0.2);
-
-    }
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &:active {
-        cursor: grabbing;
-    }
+    padding: 4rem 1rem;
 }
+
 
 
 #skills .stack figure {
@@ -80,15 +60,24 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
-    border-radius: 1rem;
 }
-
+    
 #skills .stack figure img {
     width: 50px;
     height: 50px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
+#skills .stack figure img.html-logo{
+    filter: drop-shadow(0px 0px 10px #f16923);
+}
+
+#skills .stack figure img.css-logo{
+    filter: drop-shadow(0px 0px 10px #264de4);
+}
+
+#skills .stack figure img.js-logo{
+    filter: drop-shadow(0px 0px 10px #f0db4f);
+}
 
 
 #skills .stack figcaption {
@@ -99,7 +88,7 @@
 
 #skills #my-tools{
     width: 70%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding: 1rem;

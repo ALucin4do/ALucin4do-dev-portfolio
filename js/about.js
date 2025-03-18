@@ -31,7 +31,7 @@ function showAbout(){
     setTimeout(() => {
         title.style.opacity = 1;
         title.style.transform = 'translateY(0)';
-    }, 1000);
+    }, 800);
 
     /* fade-in animation to the text */
     const text = document.querySelector('#aboutme-text');
