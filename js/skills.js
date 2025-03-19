@@ -9,30 +9,108 @@ function showSkills(){
             <div id="my-stacks" class="swiper">
                 <div id="carousel-container-stacks" class="swiper-wrapper">
                         <!-- HTML -->
-                    <article class="stack swiper-slide"> 
+                    <article class="stack html-logo swiper-slide"> 
                         <figure>
-                            <img class="html-logo" src="src/images/html logo.png" alt="">
+                            <img  src="src/images/html logo.png" alt="">
                         </figure>
 
                         <figcaption>HTML</figcaption>
                     </article>
                         <!-- CSS -->
-                    <article class="stack swiper-slide">
+                    <article class="stack css-logo swiper-slide">
                         <figure>
-                            <img class="css-logo" src="src/images/css logo.png" alt="">
+                            <img  src="src/images/css logo.png" alt="">
                         </figure>
 
                         <figcaption>CSS</figcaption>
                     </article>
                         <!-- JavaScript --> 
-                    <article class="stack swiper-slide">
+                    <article class="stack js-logo swiper-slide">
                         <figure>
-                            <img class="js-logo" src="src/images/js logo.png" alt="">
+                            <img  src="src/images/js logo.png" alt="">
                         </figure>
                         
                         <figcaption>JavaScript</figcaption>
                     </article>
 
+                    <!-- Repeating for better swiper animation -->
+                    
+
+                    <!-- HTML -->
+                    <article class="stack html-logo swiper-slide"> 
+                        <figure>
+                            <img  src="src/images/html logo.png" alt="">
+                        </figure>
+
+                        <figcaption>HTML</figcaption>
+                    </article>
+                        <!-- CSS -->
+                    <article class="stack css-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/css logo.png" alt="">
+                        </figure>
+
+                        <figcaption>CSS</figcaption>
+                    </article>
+                        <!-- JavaScript --> 
+                    <article class="stack js-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/js logo.png" alt="">
+                        </figure>
+                        
+                        <figcaption>JavaScript</figcaption>
+                    </article>
+
+
+                                            <!-- HTML -->
+                    <article class="stack html-logo swiper-slide"> 
+                        <figure>
+                            <img  src="src/images/html logo.png" alt="">
+                        </figure>
+
+                        <figcaption>HTML</figcaption>
+                    </article>
+                        <!-- CSS -->
+                    <article class="stack css-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/css logo.png" alt="">
+                        </figure>
+
+                        <figcaption>CSS</figcaption>
+                    </article>
+                        <!-- JavaScript --> 
+                    <article class="stack js-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/js logo.png" alt="">
+                        </figure>
+                        
+                        <figcaption>JavaScript</figcaption>
+                    </article>
+
+                                            <!-- HTML -->
+                    <article class="stack html-logo swiper-slide"> 
+                        <figure>
+                            <img  src="src/images/html logo.png" alt="">
+                        </figure>
+
+                        <figcaption>HTML</figcaption>
+                    </article>
+                        <!-- CSS -->
+                    <article class="stack css-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/css logo.png" alt="">
+                        </figure>
+
+                        <figcaption>CSS</figcaption>
+                    </article>
+                        <!-- JavaScript --> 
+                    <article class="stack js-logo swiper-slide">
+                        <figure>
+                            <img  src="src/images/js logo.png" alt="">
+                        </figure>
+                        
+                        <figcaption>JavaScript</figcaption>
+                    </article>
 
             <div id="my-tools">
                 <div id="scroll-container-tools">
@@ -75,27 +153,17 @@ function showSkills(){
     /* Swiper */
     const swiper = new Swiper('.swiper', {
         slidesPerView: 1,
-        spaceBetween: 30,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
+        spaceBetween: 1,
+        
+        effect: 'cards',
+        allowTouchMove: false,
+        keyboard: {
+            enabled: true,
         },
-        loop: true,
-
+        
         autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+            delay: 1000,
         },
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
-
 
     });
 
