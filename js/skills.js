@@ -2,115 +2,47 @@ function showSkills(){
     const content = `
         <section id="skills">
             <div id="button-toggle-skills">
-                <input type="checkbox" name="my-stacks" id="">
+                <input type="checkbox" name="my-stacks" id="" checked>
                 <input type="checkbox" name="my-tools" id="">
             </div>
 
-            <div id="my-stacks" class="swiper">
-                <div id="carousel-container-stacks" class="swiper-wrapper">
+            <div id="my-stacks" >
+                <div id="carousel-container-stacks" >
                         <!-- HTML -->
-                    <article class="stack html-logo swiper-slide"> 
-                        <figure>
-                            <img  src="src/images/html logo.png" alt="">
-                        </figure>
-
-                        <figcaption>HTML</figcaption>
+                    <article class="stack" id="html"> 
+                        <div class="card-front">
+                            <figure>
+                                <img  src="src/images/html logo.png" alt="">
+                            </figure>
+                            
+                            <figcaption>HTML</figcaption>
+                        </div>
                     </article>
                         <!-- CSS -->
-                    <article class="stack css-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/css logo.png" alt="">
-                        </figure>
-
-                        <figcaption>CSS</figcaption>
+                    <article class="stack" id="css">
+                        <div class="card-front">
+                            <figure>
+                                <img  src="src/images/css logo.png" alt="">
+                            </figure>
+                            
+                            <figcaption>CSS</figcaption>
+                        </div>
                     </article>
                         <!-- JavaScript --> 
-                    <article class="stack js-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/js logo.png" alt="">
-                        </figure>
+                    <article class="stack" id="js">
+                        <div class="card-front">
+                            <figure>
+                                <img  src="src/images/js logo.png" alt="">
+                            </figure>
                         
-                        <figcaption>JavaScript</figcaption>
+                            <figcaption>JavaScript</figcaption>
+                        </div>
                     </article>
+                </div>
+            </div>
 
-                    <!-- Repeating for better swiper animation -->
+
                     
-
-                    <!-- HTML -->
-                    <article class="stack html-logo swiper-slide"> 
-                        <figure>
-                            <img  src="src/images/html logo.png" alt="">
-                        </figure>
-
-                        <figcaption>HTML</figcaption>
-                    </article>
-                        <!-- CSS -->
-                    <article class="stack css-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/css logo.png" alt="">
-                        </figure>
-
-                        <figcaption>CSS</figcaption>
-                    </article>
-                        <!-- JavaScript --> 
-                    <article class="stack js-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/js logo.png" alt="">
-                        </figure>
-                        
-                        <figcaption>JavaScript</figcaption>
-                    </article>
-
-
-                                            <!-- HTML -->
-                    <article class="stack html-logo swiper-slide"> 
-                        <figure>
-                            <img  src="src/images/html logo.png" alt="">
-                        </figure>
-
-                        <figcaption>HTML</figcaption>
-                    </article>
-                        <!-- CSS -->
-                    <article class="stack css-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/css logo.png" alt="">
-                        </figure>
-
-                        <figcaption>CSS</figcaption>
-                    </article>
-                        <!-- JavaScript --> 
-                    <article class="stack js-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/js logo.png" alt="">
-                        </figure>
-                        
-                        <figcaption>JavaScript</figcaption>
-                    </article>
-
-                                            <!-- HTML -->
-                    <article class="stack html-logo swiper-slide"> 
-                        <figure>
-                            <img  src="src/images/html logo.png" alt="">
-                        </figure>
-
-                        <figcaption>HTML</figcaption>
-                    </article>
-                        <!-- CSS -->
-                    <article class="stack css-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/css logo.png" alt="">
-                        </figure>
-
-                        <figcaption>CSS</figcaption>
-                    </article>
-                        <!-- JavaScript --> 
-                    <article class="stack js-logo swiper-slide">
-                        <figure>
-                            <img  src="src/images/js logo.png" alt="">
-                        </figure>
-                        
-                        <figcaption>JavaScript</figcaption>
-                    </article>
 
             <div id="my-tools">
                 <div id="scroll-container-tools">
@@ -150,22 +82,7 @@ function showSkills(){
 
     main.innerHTML = content;
 
-    /* Swiper */
-    const swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 1,
-        
-        effect: 'cards',
-        allowTouchMove: false,
-        keyboard: {
-            enabled: true,
-        },
-        
-        autoplay: {
-            delay: 1000,
-        },
 
-    });
 
     /* Toggle */
     const toggleStacks = document.querySelector('#button-toggle-skills input[name="my-stacks"]');
@@ -178,8 +95,6 @@ function showSkills(){
             myStacks.style.display = 'flex';
             myTools.style.display = 'none';
             toggleTools.checked = false;
-        } else {
-            myStacks.style.display = 'none';
         }
     });
 
@@ -188,22 +103,44 @@ function showSkills(){
             myTools.style.display = 'flex';
             myStacks.style.display = 'none';
             toggleStacks.checked = false;
-        } else {
-            myTools.style.display = 'none';
         }
     });
-
-        
+    
     
 
 
+    /* making the cards draggable and collidable */
+    const cards = document.querySelectorAll('.stack');
+    const container = document.querySelector('.carousel-container-stacks');
 
+        /* draggable library settings */
+    Draggable.create(cards, {
+        type: 'x,y',
+        bounds: container,
+        edgeResistance: 0.65,
+        inertia: true,
+        
 
+        onDragEnd: function(){
+            /* 3d effects come back when the user drops the card */
+            gsap.to(this.target, {
+                rotationX: 0,
+                rotationY: 0,
+                z: 0,
+                duration: 0.3
+            });
+        },
 
-
-
-
-
-
+        onPress: function(){
+            /* grab card effect */
+            gsap.to(this.target, {
+                rotationX: 10,
+                rotationY: 5,
+                z: 20,
+                duration: 0.2
+            });
+        }
+        
+    });
 
 }

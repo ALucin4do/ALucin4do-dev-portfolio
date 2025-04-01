@@ -2,7 +2,6 @@
 #skills{
     font-size: 2.4rem;
     gap: 5rem;
-    
 }
 
 #skills #button-toggle-skills{
@@ -17,44 +16,99 @@
 }
 
 #skills #my-stacks{
-    width: 150px;
-    height: 150px;
+    width: 70%;;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
     transition: all ease-in-out 500ms;
-    
+    padding: 2rem;
+    border-radius: 1rem;
+    background:rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
+
+
 
 #skills #carousel-container-stacks{
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 1rem;
+    padding: 1rem;
+    gap: 5rem;
+    perspective: 1000px;
 }
-
-
 
 #skills .stack {
     background: var(--bg-color-2);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2); 
-    overflow: hidden;
-    padding: 4rem 1rem;
     position: relative;
+    border-radius: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 300ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    cursor: grab;
+    width: 60px;
+    height: 100px;
+    padding: 2rem 2rem 4rem 2rem;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 1.2rem;
-    transition: all 1000ms ease-in-out; 
-    border-radius: 1rem;
-    padding: 4rem 1rem;
+    user-select: none;
+    touch-action: none;
+    
 
+
+    &:active{
+        cursor: grabbing;
+        transform: translate3d(0px, -10px, 0px) scale(1.02);        
+        box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.8);
+        z-index: 100;
+    }
+    
+}
+
+/* collide effect controled by js */
+#skills .stack.colliding{
+    animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
+#skills .stack .card-front{
+    pointer-events: none;
+}
+
+#skills .stack:active .card-front{
+    animation: float 2000ms ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 #skills .stack figure {
     display: flex;
@@ -75,42 +129,43 @@
     color: var(--text-color-1);
 }
 
-#skills .html-logo{
+#skills #html{
     border: 4px solid #f16923;
-    filter: drop-shadow(0px 0px 8px #f16923);
+    filter: drop-shadow(0px 0px 5px #f16923);
+    
 }
 
-#skills .html-logo figure img{
+#skills #html figure img{
     filter: drop-shadow(0px 0px 5px #f16923);
 }
 
-#skills .css-logo{
+#skills #css{
     border: 4px solid #264de4;
-    filter: drop-shadow(0px 0px 10px #264de4);
+    filter: drop-shadow(0px 0px 5px #264de4);
 }
 
-#skills .css-logo figure img{
-    filter: drop-shadow(0px 0px 10px #264de4);
+#skills #css figure img{
+    filter: drop-shadow(0px 0px 5px #264de4);
 }
 
-#skills .js-logo{
+#skills #js{
     border: 4px solid #f0db4f;
-    filter: drop-shadow(0px 0px 10px #f0db4f);
+    filter: drop-shadow(0px 0px 5px #f0db4f);
 }
 
-#skills .js-logo figure img{
-    filter: drop-shadow(0px 0px 10px #f0db4f);
+#skills #js figure img{
+    filter: drop-shadow(0px 0px 5px #f0db4f);
 }
 
 
 
 #skills #my-tools{
-    width: 70%;
+    width: 80%;
     display: none;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     overflow: hidden;
     border-radius: 1rem;
     box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
@@ -118,22 +173,15 @@
 }
 
 #skills #scroll-container-tools{
-    width: 200%;
     display: flex;
-    gap: 2rem;
-    overflow-x: scroll;
+    gap: 5rem;
     padding: 2rem;
     border-radius: 1rem;
-    
-    &::-webkit-scrollbar{
-        display: none;
-    }
 }
 
 #skills .tool {
-    cursor: grab;
     max-height: 110px;
-    padding: 1rem;
+    padding: 1.5rem;
     position: relative;
     width: 150px;
     display: flex;
@@ -142,23 +190,18 @@
     justify-content: space-between;
     gap: 1.2rem;
     border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     transition: all 300ms ease-in-out; 
 
     
     &:hover{
-        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px var(--subtitle);
 
     }
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
 
-    &:active {
-        cursor: grabbing;
-    }
 }
 
 #skills .tool figure {
