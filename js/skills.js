@@ -86,13 +86,13 @@ function showSkills(){
             </div>
         </section>    
     `
-
+    const main = document.getElementById('main');
     main.innerHTML = content;
 
 
     let isButtonToggleChecked = toggleStacksAndTools();
 
-    if(isButtonToggleChecked === false){
+    if(!isButtonToggleChecked){
         cardsDraggable(document.querySelectorAll('.stack'), document.querySelector('.carousel-container-stacks'));
     }
 

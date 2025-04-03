@@ -1,14 +1,10 @@
-
-const main = document.getElementById('main');
-
-
-
 function showHome() {
+    const main = document.getElementById('main');
     const homeContent = `
         <section id="home">
             <hgroup>
                 <h2 id="typed-animation-name"></h2>
-                <h3 id="role"> <span>Your</span>Front-end Developer</h3>
+                <h3 id="role"> <span>Your</span>Web Developer</h3>
             </hgroup>
 
             <div class="social-networks-container">
@@ -22,39 +18,50 @@ function showHome() {
     main.innerHTML = homeContent;
 
     /* typing animation to the greetings */
+    typingAnimation()
+
+    /* fade-in animation to the role */
+    roleFadeIn()
+
+    /* fade-in animation to the social networks container */
+    socialNetworkContainerFadeIn()
+
+    /* copy email  */
+    copyEmail()
+
+}
+
+function typingAnimation () {
     const greetings = document.getElementById('typed-animation-name');
 
     var typed = new Typed(greetings, {
         strings: ['Hello, ^500 I am <mark>Lucino De Campos</mark>'],
         typeSpeed: 100,
     });
+}
 
-    /* fade-in animation to the role */
+function roleFadeIn () {
     const role = document.getElementById('role');
     role.style.opacity = 0;
     setTimeout(() => {
         role.style.opacity = 1;
         role.style.transform = 'translateY(0px)'
     }, 5000);
+}
 
-    /* fade-in animation to the social networks container */
+function socialNetworkContainerFadeIn () {
     const socialNetworksContainer = document.querySelector('.social-networks-container');
     socialNetworksContainer.style.opacity = 0;
     setTimeout(() => {
         socialNetworksContainer.style.opacity = 1;
         socialNetworksContainer.style.transform = 'translateY(0px)'
     }, 6000);
+}
 
-
-
-
-    /* copy email  */
+function copyEmail () {
     const email = document.getElementById('email');
     email.addEventListener('click', () => {
         navigator.clipboard.writeText('lucinogabriel1510@gmail.com');
         alert('Email copied to clipboard!');
     });
-
-
 }
-
