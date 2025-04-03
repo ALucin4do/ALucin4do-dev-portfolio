@@ -6,7 +6,7 @@
 
 #projects h2{
     font-size: 2em;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     color: var(--lilas);
     text-shadow: 0 0 5px var(--lilas), 0 0 10px var(--lilas);
 }

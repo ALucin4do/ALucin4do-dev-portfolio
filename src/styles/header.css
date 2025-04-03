@@ -143,5 +143,5 @@ header nav ul .navbar-item{
 
 .section-button span.active{
     background-color: var(--logo2);
-    text-shadow: 0px 0px 7px var(--logo3);
+    text-shadow: 0px 0px 4px var(--logo3);
 }
