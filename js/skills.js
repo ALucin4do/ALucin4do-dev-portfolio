@@ -1,9 +1,16 @@
 function showSkills(){
     const content = `
         <section id="skills">
-            <div id="button-toggle-skills">
-                <input type="checkbox" name="my-stacks" id="" checked>
-                <input type="checkbox" name="my-tools" id="">
+            <div id="skills-titles">
+                <h2 id="stacks-title"> My Stacks </h2>
+                <h2 id="tools-title"> My Tools </h2>
+                
+                <label for="toggle" id="button-toggle-skills">
+                    <input type="checkbox" id="toggle">
+                    <span id="ball"></span>
+                    <i class="fa-solid fa-gear" id="gear"></i>
+                    <i class="fa-solid fa-toolbox" id="toolbox"></i>
+                </label>
             </div>
 
             <div id="my-stacks" >
@@ -83,37 +90,56 @@ function showSkills(){
     main.innerHTML = content;
 
 
+    let isButtonToggleChecked = toggleStacksAndTools();
 
-    /* Toggle */
-    const toggleStacks = document.querySelector('#button-toggle-skills input[name="my-stacks"]');
-    const toggleTools = document.querySelector('#button-toggle-skills input[name="my-tools"]');
+    if(isButtonToggleChecked === false){
+        cardsDraggable(document.querySelectorAll('.stack'), document.querySelector('.carousel-container-stacks'));
+    }
+
+    
+}
+
+
+
+function toggleStacksAndTools(){
+    const stacksTitle = document.getElementById('stacks-title');
+    const toolsTitle = document.getElementById('tools-title');
     const myStacks = document.getElementById('my-stacks');
     const myTools = document.getElementById('my-tools');
-
-    toggleStacks.addEventListener('change', () => {
-        if (toggleStacks.checked) {
-            myStacks.style.display = 'flex';
-            myTools.style.display = 'none';
-            toggleTools.checked = false;
-        }
-    });
-
-    toggleTools.addEventListener('change', () => {
-        if (toggleTools.checked) {
-            myTools.style.display = 'flex';
+    const buttonToggle = document.getElementById('toggle');
+    
+    const labelToggle = document.getElementById('button-toggle-skills');
+    
+    buttonToggle.addEventListener('change', () => {
+        if(buttonToggle.checked === true){
+            stacksTitle.style.display = 'none';
+            toolsTitle.style.display = 'block';
             myStacks.style.display = 'none';
-            toggleStacks.checked = false;
+            myTools.style.display = 'block';
+
+            labelToggle.style.borderColor = 'var(--logo1)';
+            labelToggle.style.boxShadow = '0 0 10px var(--logo1)'
         }
+        else{
+            stacksTitle.style.display = 'block';
+            toolsTitle.style.display = 'none';
+            myStacks.style.display = 'block';
+            myTools.style.display = 'none';
+
+            labelToggle.style.borderColor = 'var(--subtitle)';
+            labelToggle.style.boxShadow = '0 0 10px var(--subtitle)';
+        }
+        
     });
-    
-    
+    return buttonToggle.checked;
+
+}
+
+function cardsDraggable(cards, container){
 
 
-    /* making the cards draggable and collidable */
-    const cards = document.querySelectorAll('.stack');
-    const container = document.querySelector('.carousel-container-stacks');
 
-        /* draggable library settings */
+    /* draggable library settings */
     Draggable.create(cards, {
         type: 'x,y',
         bounds: container,

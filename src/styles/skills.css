@@ -4,16 +4,90 @@
     gap: 5rem;
 }
 
-#skills #button-toggle-skills{
+#skills #skills-titles{
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-#skills #button-toggle-skills input{
-    width: 2.4rem;
-    height: 2.4rem;
-    cursor: pointer;
+#skills h2{
+    font-size: 2em;
 }
+
+#skills #stacks-title{
+    color: var(--subtitle);
+    text-shadow: 0 0 5px var(--subtitle), 0 0 10px var(--text-mark);
+
+}
+
+#skills #tools-title{
+    color: var(--logo1);
+    text-shadow: 0 0 5px var(--logo1), 0 0 10px var(--logo1);
+    display: none;
+}
+
+#skills #toggle{
+    display: none;
+}
+
+#skills #button-toggle-skills{
+    display: block;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid var(--subtitle);
+    position: fixed;
+    cursor: pointer;
+    background-color: var(--bg-color-2);
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.8);
+    right: 50px;
+
+}
+
+#skills #ball{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--subtitle);
+    left: 1px;
+    z-index: 10;
+    transition: all 600ms ease-in-out;
+    border: 1px solid var(--bg-color-2);
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+#skills #toggle:checked + #ball{
+    transform: translate(53px, -50%);
+    background-color: var(--logo1);
+}
+
+#skills #gear{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 18px;
+    color: var(--subtitle);
+    
+}
+
+#skills #toolbox{
+    color: var(--logo1);
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+}
+
+
+
 
 #skills #my-stacks{
     width: 70%;;
