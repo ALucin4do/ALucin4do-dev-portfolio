@@ -6,18 +6,18 @@
 
 #projects h2{
     font-size: 2em;
+    margin-bottom: 3rem;
+    color: var(--lilas);
+    text-shadow: 0 0 5px var(--lilas), 0 0 10px var(--lilas);
 }
 
 #projects #container-projects{
-    width: 40%;
-    height: 70vh;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    width: 90%;
+    height: 350px;
+    padding: 2rem;
     background-color: rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    overflow-y: auto;
     border-radius: 1rem;
     box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     transition: all ease-in-out 500ms;
@@ -25,13 +25,13 @@
 
 #projects #slider-projects{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 6rem;
+    padding: 1rem;
     border-radius: 1rem;
-    height: 80%;
-    overflow-y: scroll;
-    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: fit-content;
     transition: all ease-in-out 500ms;
 }
 
@@ -43,6 +43,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+
 }
 
 #projects .project .project-header{
@@ -90,26 +91,55 @@
     background-color: #F7DF1E;
 }
 
+#projects .project .project-header .project-tags .react-tag{
+    background-color: #61DAFB;
+}
+
+#projects .project .project-header .project-tags .node-tag{
+    background-color: #339933;
+}
+
+
+#projects .project .project-header .project-tags .typescript-tag{
+    background-color: #3178C6;
+}
+
+#projects .project .project-header .project-tags .next-tag{
+    background-color: #000000;
+}
+
+#projects .project .project-header .project-tags .tailwind-tag{
+    background-color: #06B6D4;
+}
+
+#projects .project .project-header .project-tags .styled-components-tag{
+    background-color: #DB7093;
+}
+
+#projects .project .project-header .project-tags .react-native-tag{
+    background-color: #61DAFB;
+}
+
+
+
+
 #projects .project .project-main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    height: 120px;
+    height: 180px;
     padding: 1rem;
+    width: auto;
 }
 
 #projects .project .project-main .project-image{
-    width: 50px;
-    height: 50px;
-    border-radius: 2rem;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
 }
 
 #projects .project .project-main .project-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
+
 }
 
 #projects .project .project-main .project-description{
@@ -125,6 +155,7 @@
     color: aliceblue;
     align-items: center;
     justify-content: center;
+    position: static;
 }
 
 #projects .project .project-links a{
